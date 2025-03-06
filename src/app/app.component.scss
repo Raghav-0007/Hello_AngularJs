@@ -3,3 +3,18 @@ img{
     margin: 0 auto;
     width: 25%;
 }
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    text-align: center;
+  }
+  
+  input {
+    margin: 10px;
+    padding: 8px;
+    font-size: 16px;
+  }
+  

@@ -1,7 +1,13 @@
-<div>
-  <h1>hello {{userName}} from bridgelabz!</h1>
+<div class="container">
+  <!-- Logo -->
   <img [src]="imagePath" (click)="onClick()" style="cursor: pointer;" alt="Logo">
-</div>
-<div>
-  <input type="text" [(ngModel)]="userName" placeholder="Enter your name"/>
+
+  <!-- Input field with Two-Way Data Binding -->
+  <input type="text" [(ngModel)]="userName" (input)="validateUserName()" placeholder="Enter your name" />
+
+  <!-- Hello Message if no error -->
+  <h1 *ngIf="!errorMessage && userName">Hello from BridgeLabz, {{ userName }}!</h1>
+
+  <!-- Error message -->
+  <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
 </div>
